@@ -6,6 +6,8 @@ export default defineConfig({
   description: "ArtistDB documentation for API and more information",
   titleTemplate: " ArtistDB",
 
+  base: "/",
+
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
