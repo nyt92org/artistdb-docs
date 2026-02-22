@@ -1,75 +1,129 @@
 # Terms of Services
 
 ::: warning 
-**This terms of service will be subject to change at any time during the development of the project.**
+**This terms of service will be subject to change at any time during the development of the project. This TOS was written with the help of AI and publically available TOS samples. If you know a lawyer or someone who is an expert in TOS, please contact us at [support[at]artistdb[dot]org](mailto:support@artistdb.org)**
 :::
 
 ArtistDB is the open database of SFW/NSFW artists. It is an open-source platform enabling artists to showcase their work and connect with audiences created by [NYT92org](https://github.com/nyt92org). By using our services, you agree to these terms and our commitment to creative rights protection.
 
+## Eligibility and Account Registration
+
+By using the Platform, you represent and warrant that:
+
+- You are at least 18 years of age, or the age of majority in your jurisdiction, whichever is greater;
+- You have the legal capacity to enter into these Terms;
+- You will provide accurate, current, and complete information during registration and keep your account information updated;
+- You are solely responsible for maintaining the confidentiality of your account credentials and for all activity under your account.
+
+ArtistDB reserves the right to refuse service, terminate accounts, or remove content at its sole discretion, with cause.
+
 ## Acceptable Use
 
-- Using the services for legal use cases like building application, etc.
-- Using the services that does not generate high-volume requests
-- To do research about each artists or the whole database
-- To help contribute our database & codebase
+You may use the Platform only for lawful purposes and in accordance with these Terms. Permitted uses include:
+
+- Researching and discovering artists listed in the database;
+- Contributing accurate artist information to the database in good faith;
+- Building applications that interface with the Platform for legal use cases.
 
 ## Prohibited Activities
 
-- Unauthorized commercial redistribution and high-volume requests exceeding the limit of the API access
-- Automated scraping
-- AI training/data mining without explicit consent
-- Using it for harassment, impersonation, or illegal activities
-- Using it for commercial purposes without explicit consent
+The following activities are strictly prohibited and may result in immediate account termination, IP address blocking, domain blocking, or legal action.
 
-Violating any of these terms may result in the suspension of your account if you are a registered user or your **IP addresses + Domains** may be blocked from our services even if you are both registered or unregistered user.
+### Data and System Integrity
 
-## Non-Commercial & Commercial Use
+- Unauthorized commercial redistribution of Platform data;
+- Automated scraping, crawling, or harvesting of content from the Platform by any means not expressly authorized;
+- Circumventing, disabling, or interfering with any security feature, access control, or rate-limiting mechanism;
+- Exceeding API rate limits or abusing API access in a manner that degrades service for other users;
+- Using the Platform data for AI training, machine learning, or data mining purposes without prior written consent from ArtistDB & Artists.
 
-::: info
-Non-commercial and commercial can still use the API normally for now!
-:::
+### Harmful and Illegal Conduct
 
-- Non-Commercial Use: 
-    - Non-commercial use like building application or embedding our services to your website or application for personal use, research, etc can be used for free with no charge and our services limit is also not applied to non-commercial use. You can request for more limit up to 120 requests per minute.
-- Commercial Use: 
-    - Commercial use like building application or embedding our services to your website or application that generate high-volume requests exceeding the limit of the API access will need to contact us for more information and we will provide you with a commercial plan for you to use our services.
+- Impersonating any person, artist, or entity, or misrepresenting your affiliation with any person or entity;
+- Harassing, threatening, abusing, or intimidating any artist, user, or third party;
+- Uploading, transmitting, or distributing content that violates any applicable law or regulation;
+- Uploading content that infringes on any third party's intellectual property rights, privacy rights, or other legal rights;
+- Using the Platform to facilitate or promote any illegal activity.
+
+## API Access and Restrictions
+
+Access to the ArtistDB API is subject to these Terms and any additional API-specific documentation published by ArtistDB. By using the API, you additionally agree to:
+
+- Comply with all rate limits and access thresholds specified in the API documentation;
+- Clearly attribute data sourced from ArtistDB in any application or service, in accordance with the CC BY-ND 4.0 license;
+- Immediately cease API usage upon request from ArtistDB for any reason.
+
+ArtistDB reserves the right to suspend or revoke API access at any time, without liability, for any breach of these Terms or for operational reasons.
+
+## Data and Software Licenses
+
+### Data Content
+
+All data made available through the Platform is licensed under the [Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0/). Under this license:
+
+- You may use, copy, and distribute the data for both non-commercial and commercial purposes;
+- You must provide appropriate attribution to ArtistDB;
+- You may **not** modify, transform, or build upon the data;
+- You may **not** distribute modified versions of the data.
+
+### Software
+
+The ArtistDB website and API source code are open-source and licensed under the [GNU General Public License v3.0 (GPL-3.0)](https://www.gnu.org/licenses/gpl-3.0.en.html). Any use, modification, or distribution of the software must comply with the terms of the GPL-3.0.
 
 ## Intellectual Property
 
-Artists retain all rights to their work. By uploading content, you:
-- Confirm ownership or proper licensing
-- Grant ArtistDB non-exclusive display rights
-- Agree to resolve copyright disputes through DMCA process
+### Artist Rights
+
+Artists retain all intellectual property rights in their original works. ArtistDB claims no ownership over artist or user submitted content.
+
+### License Grant by Artists
+
+By submitting content to the Platform, you represent and warrant that you own or have the necessary licenses, rights, consents, and permissions to submit the content, and you grant ArtistDB a non-exclusive, worldwide, royalty-free license to display, reproduce, and distribute your content solely for the purposes of operating and promoting the Platform.
+
+### Disputes
+
+ArtistDB respects intellectual property rights. If you believe that content on the Platform infringes your copyright, or do not want to be included in the database, please submit a written notice to [support[at]artistdb[dot]org](mailto:support@artistdb.org) containing:
+
+- A description of the copyrighted work claimed to be infringed or your request to be removed from the database;
+- A description of where the infringing material is located on the Platform or your profile;
+- Your contact information;
+- A statement of good faith belief;
+- A statement, under penalty of perjury, that the information in the notice is accurate and that you are the copyright owner or authorized to act on their behalf.
+
+ArtistDB will respond to valid notices in accordance with applicable law. Repeat infringers will have their accounts terminated.
 
 ## Privacy
 
-At ArtistDB, your privacy is our priority. We're committed to ensuring your **personal information remains confidential** and is never shared with third parties.
+### Artist Privacy
 
-- For Artists:
-    - When you submit your work, rest assured that **we will not share any of your personal information, including your email address, with third parties**. We also fully respect your preferences if you wish to remain private or not be included in our public database. Your choices regarding your visibility are always honored.
-- For Users:
-    - To enhance your experience and improve our services, we use **analytics to collect data for internal analysis**. To uphold our commitment to your privacy and avoid sharing information with external parties, we use **Posthog analytics**. This means all analytics data remains within our secure environment. You do have right to opt-out of the analytics at anytimes.
+ArtistDB will not share artists' personal information, including email addresses, with third parties. Artists who wish to remain private or be excluded from the public database may request this by contacting [support[at]artistdb[dot]org](mailto:support@artistdb.org). Such preferences will be honored in a timely manner.
 
-## Comments Guidelines
+### User Analytics
 
-You can use the comment feature (Registered users only) to share your thoughts, opinions, or feedback with other users. However, please note the following guidelines to follow when using the comment feature:
+To improve the Platform, ArtistDB uses Posthog analytics to collect anonymized usage data. All analytics data is processed within ArtistDB's secure environment and is not shared with external third parties. You may opt out of analytics collection at any time through your account settings or by contacting [support[at]artistdb[dot]org](mailto:support@artistdb.org).
 
-- **Comments must be appropriate for all audiences.**
-- **Comments must not be offensive, hateful, or discriminatory.**
-- **Comments must not promote or encourage illegal activities.**
-- **Comments must not contain spam, malware, or viruses.**
-- **Comments must not contain any personal information.**
+### Data Retention and Deletion
 
-By not following these guidelines, you may be subject to a permanent ban from using the comment feature or your whole account may be permanently banned and deleted.
+Upon account deletion, ArtistDB will remove your personal information from active systems within a reasonable time, subject to legal retention obligations. Anonymized or aggregated data may be retained indefinitely.
 
-## Contact & Compliance
+## Community Standards and Comments
 
-If there is any issue regarding the artists, comments or general feedback, etc. Please use the report button to report the issue.
+Registered users may post comments on the Platform. By posting a comment, you agree that your comment:
 
-If you have any more questions or concerns, please contact us at:
-- [support[at]artistdb[dot]org](mailto:support@artistdb.org)
-- [nyt92[at]uninbox[dot]me](mailto:nyt92@uninbox.me)  
+- Is appropriate for all audiences and does not contain adult, hateful, or discriminatory content;
+- Does not harass, threaten, or demean any individual or group;
+- Does not promote, encourage, or facilitate illegal activities;
+- Does not contain spam, unsolicited advertising, malware, or malicious code;
+- Does not disclose any person's personal information without their express consent.
 
+ArtistDB reserves the right to remove any comment, without notice, that it determines in its sole discretion violates these standards. Violations may result in temporary or permanent suspension of comment privileges or full account termination, depending on the severity and frequency of violations.
+
+## Contact and Compliance
+
+For questions, concerns, or notices under these Terms, please contact:
+
+- **General Support:** [support[at]artistdb[dot]org](mailto:support@artistdb.org)
+- **Administrator:** [nyt92[at]uninbox[dot]me](mailto:nyt92@uninbox.me)
 
 ---
 

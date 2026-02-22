@@ -10,7 +10,7 @@ Welcome to the ArtistDB submission process. To maintain the integrity and qualit
 
 ## How to apply?
 
-[Application Form](https://docs.google.com/forms/d/e/1FAIpQLSfrhAFvsfjoEFXUEb_j3W3MVN028x3kWts4-2n25frCTuCSng/viewform)
+[Application Form](https://form.nyt92.eu.org/forms/artistdb)
 
 or 
 

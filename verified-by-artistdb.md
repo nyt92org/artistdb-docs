@@ -35,14 +35,15 @@ Verified by ArtistDB is a badge that is given to artists that have been verified
 Artists can get verified badge by completing the verification process or filling the form by themselves. Verification process is open to all artists and a proof your identity. This will ensure that the information on the page is accurate and up-to-date.
 
 You as the artist will be required to do from this following list:
-- Have your artist profile in our database (important)
-- Showing proof that you own the social media or monetization platform by taking your picture of your hand (no face is needed) with any hand gesture in front of the device with the social media or monetization platform open (important)
-- Modify and confirm the information on the website (important)
-- Your sketches, speed paint, or arts proof (optional)
+- (*) Have your artist profile in our database (if you submitted one and have checked "Are you an artists submitting this?", please wait for us to contact you)
+- (*) Modify and confirm the information on the website
+- (*) Your sketches, speed paint, or arts proof (if you post them on your social media, we will review it)
 
 After an extensive review by moderators and admin, you will receive the verification badge on your profile. We might reject your verification if you do not follow the rules or if you do not provide enough proof but you can always try to reapply for verification.
 
 If you are ready to get verified, please email us at [support[at]artistdb[dot]org](mailto:support@artistdb.org) or [nyt92[at]uninbox[dot]me](mailto:nyt92@uninbox.me).
+
+If you have not submitted your artist profile yet, please [submit your application](https://form.nyt92.eu.org/forms/artistdb) and make sure to check "Are you an artists submitting this?" and fill in the required information, then wait for us to contact you.
 
 ::: warning
 If artist use AI or doing something against the rules after getting the verification from us, we will immediately remove the verification and get added to the Artist Notice permanently.
