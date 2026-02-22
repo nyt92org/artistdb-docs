@@ -48,7 +48,7 @@ If you want to remove your profile from ArtistDB, please contact us at [support[
 
 ### Can I use ArtistDB API for my own project?
 
-Yes, you can use ArtistDB API for your own project but you need to follow the rules in the [API Documentation](/api) and read our [Terms of Service](/tos).
+Yes, you can use ArtistDB API for your own project but you need to follow the rules in the [API Documentation](/) and read our [Terms of Service](/terms-of-services).
 
 ### Can I self-host ArtistDB API?
 
