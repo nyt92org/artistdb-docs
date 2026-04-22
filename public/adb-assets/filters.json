@@ -1,0 +1,393 @@
+{
+  "socials": [
+    {
+      "link": "https://twitter.com",
+      "regex": "/(https://)?(([^.]+\\.)?)twitter\\.com/.*",
+      "default": "Twitter"
+    },
+    {
+      "link": "https://x.com",
+      "regex": "/(https://)?(([^.]+\\.)?)x\\.com/.*",
+      "default": "X"
+    },
+    {
+      "link": "https://fanbox.cc",
+      "regex": "/(https://)?(([^.]+\\.)?)fanbox\\.cc/.*",
+      "default": "Fanbox"
+    },
+    {
+      "link": "https://boosty.to",
+      "regex": "/(https://)?(([^.]+\\.)?)boosty\\.to/.*",
+      "default": "Boosty"
+    },
+    {
+      "link": "https://weibo.com",
+      "regex": "/(https://)?(([^.]+\\.)?)weibo\\.com/.*",
+      "default": "Weibo"
+    },
+    {
+      "link": "https://facebook.com",
+      "regex": "/(https://)?(([^.]+\\.)?)facebook\\.com/.*",
+      "default": "Facebook"
+    },
+    {
+      "link": "https://tiktok.com",
+      "regex": "/(https://)?(([^.]+\\.)?)tiktok\\.com/.*",
+      "default": "TikTok"
+    },
+    {
+      "link": "https://youtube.com",
+      "regex": "/(https://)?(([^.]+\\.)?)youtube\\.com/.*",
+      "default": "YouTube"
+    },
+    {
+      "link": "https://twitch.tv",
+      "regex": "/(https://)?(([^.]+\\.)?)twitch\\.tv/.*",
+      "default": "Twitch"
+    },
+    {
+      "link": "https://patreon.com",
+      "regex": "/(https://)?(([^.]+\\.)?)patreon\\.com/.*",
+      "default": "Patreon"
+    },
+    {
+      "link": "https://discord.com",
+      "regex": "/(https://)?(([^.]+\\.)?)discord\\.com/.*",
+      "default": "Discord"
+    },
+    {
+      "link": "https://bsky.app",
+      "regex": "/(https://)?(([^.]+\\.)?)bsky\\.app/.*",
+      "default": "Bluesky"
+    },
+    {
+      "link": "https://pixiv.net",
+      "regex": "/(https://)?(([^.]+\\.)?)pixiv\\.net/.*",
+      "default": "Pixiv"
+    },
+    {
+      "link": "https://instagram.com",
+      "regex": "/(https://)?(([^.]+\\.)?)instagram\\.com/.*",
+      "default": "Instagram"
+    },
+    {
+      "link": "https://plurk.com",
+      "regex": "/(https://)?(([^.]+\\.)?)plurk\\.com/.*",
+      "default": "Plurk"
+    },
+    {
+      "link": "https://substack.com",
+      "regex": "/(https://)?(([^.]+\\.)?)substack\\.com/.*",
+      "default": "Substack"
+    },
+    {
+      "link": "https://reddit.com",
+      "regex": "/(https://)?(([^.]+\\.)?)reddit\\.com/.*",
+      "default": "Reddit"
+    },
+    {
+      "link": "https://artstation.com",
+      "regex": "/(https://)?(([^.]+\\.)?)artstation\\.com/.*",
+      "default": "ArtStation"
+    },
+    {
+      "link": "https://deviantart.com",
+      "regex": "/(https://)?(([^.]+\\.)?)deviantart\\.com/.*",
+      "default": "DeviantArt"
+    },
+    {
+      "link": "https://subscribestar.adult",
+      "regex": "/(https://)?(([^.]+\\.)?)subscribestar\\.adult/.*",
+      "default": "SubscribeStar"
+    },
+    {
+      "link": "https://tumblr.com",
+      "regex": "/(https://)?(([^.]+\\.)?)tumblr\\.com/.*",
+      "default": "Tumblr"
+    },
+    {
+      "link": "https://telegram.org",
+      "regex": "/(https://)?(([^.]+\\.)?)telegram\\.org/.*",
+      "default": "Telegram"
+    },
+    {
+      "link": "https://discord.gg",
+      "regex": "/(https://)?(([^.]+\\.)?)discord\\.gg/.*",
+      "default": "Discord Server"
+    },
+    {
+      "link": "https://t.me",
+      "regex": "/(https://)?(([^.]+\\.)?)t\\.me/.*",
+      "default": "Telegram"
+    },
+    {
+      "link": "https://mastodon.social",
+      "regex": "/(https://)?(([^.]+\\.)?)mastodon\\.social/.*",
+      "default": "Mastodon"
+    },
+    {
+      "link": "https://pixiv.me",
+      "regex": "/(https://)?(([^.]+\\.)?)pixiv\\.me/.*",
+      "default": "Pixiv"
+    },
+    {
+      "link": "https://baraag.net",
+      "regex": "/(https://)?baraag\\.net/.*",
+      "default": "Baraag"
+    },
+    {
+      "link": "https://app.unifans.io",
+      "regex": "/(https://)?app.unifans\\.io/.*",
+      "default": "Unifans"
+    },
+    {
+      "link": "https://afdian.com",
+      "regex": "/(https://)?(([^.]+\\.)?)afdian\\.com/.*",
+      "default": "Afdian"
+    },
+    {
+      "link": "https://fantia.jp",
+      "regex": "/(https://)?(([^.]+\\.)?)fantia\\.jp/.*",
+      "default": "Fantia"
+    },
+    {
+      "link": "https://ci-en.dlsite.com",
+      "regex": "/(https://)?ci-en\\.dlsite\\.com/.*",
+      "default": "Ci-en"
+    },
+    {
+      "link": "https://xfolio.jp",
+      "regex": "/(https://)?(([^.]+\\.)?)xfolio\\.jp/.*",
+      "default": "Xfolio"
+    },
+    {
+      "link": "https://www.lofter.com",
+      "regex": "/(https://)?(([^.]+\\.)?)lofter\\.com/.*/",
+      "default": "Lofter"
+    },
+    {
+      "link": "https://vk.com",
+      "regex": "/(https://)?(([^.]+\\.)?)vk\\.com/.*/",
+      "default": "VK"
+    },
+    {
+      "link": "https://www.newgrounds.com",
+      "regex": "/(https://)?(([^.]+\\.)?)newgrounds\\.com/.*/",
+      "default": "Newgrounds"
+    },
+    {
+      "link": "https://www.hentai-foundry.com",
+      "regex": "/(https://)?(([^.]+\\.)?)hentai-foundry\\.com/.*/",
+      "default": "Hentai-Foundry"
+    },
+    {
+      "link": "https://picarto.tv",
+      "regex": "/(https://)?(([^.]+\\.)?)picarto\\.tv/.*/",
+      "default": "Picarto"
+    },
+    {
+      "link": "https://artstreet.mediabang.com",
+      "regex": "/(https://)?(([^.]+\\.)?)artstreet\\.mediabang\\.com/.*",
+      "default": "ArtStreet by MediBang Paint"
+    },
+    {
+      "link": "https://seiga.nicovideo.jp",
+      "regex": "/(https://)?(([^.]+\\.)?)seiga\\.nicovideo\\.jp/.*",
+      "default": "Nico Nico Seiga"
+    },
+    {
+      "link": "https://www.dribbble.com",
+      "regex": "/(https://)?(([^.]+\\.)?)dribbble\\.com/.*",
+      "default": "Dribbble"
+    },
+    {
+      "link": "https://www.artsy.net",
+      "regex": "/(https://)?(([^.]+\\.)?)artsy\\.net/.*",
+      "default": "Artsy"
+    },
+    {
+      "link": "https://www.saatchiart.com",
+      "regex": "/(https://)?(([^.]+\\.)?)saatchiart\\.com/.*",
+      "default": "Saatchi Art"
+    },
+    {
+      "link": "https://www.pinterest.com",
+      "regex": "/(https://)?(([^.]+\\.)?)pinterest\\.com/.*",
+      "default": "Pinterest"
+    },
+    {
+      "link": "https://www.linkedin.com",
+      "regex": "/(https://)?(([^.]+\\.)?)linkedin\\.com/.*",
+      "default": "LinkedIn"
+    },
+    {
+      "link": "https://www.weverse.io",
+      "regex": "/(https://)?(([^.]+\\.)?)weverse\\.io/.*",
+      "default": "Weverse"
+    },
+    {
+      "link": "https://www.kakaotalk.com",
+      "regex": "/(https://)?(([^.]+\\.)?)kakaotalk\\.com/.*",
+      "default": "KakaoTalk"
+    },
+    {
+      "link": "https://www.xiaohongshu.com",
+      "regex": "/(https://)?(([^.]+\\.)?)xiaohongshu\\.com/.*",
+      "default": "Xiaohongshu"
+    },
+    {
+      "link": "https://www.bilibili.com",
+      "regex": "/(https://)?(([^.]+\\.)?)bilibili\\.com/.*",
+      "default": "Bilibili"
+    },
+    {
+      "link": "https://www.douyin.com",
+      "regex": "/(https://)?(([^.]+\\.)?)douyin\\.com/.*",
+      "default": "Douyin"
+    },
+    {
+      "link": "https://www.douban.com",
+      "regex": "/(https://)?(([^.]+\\.)?)douban\\.com/.*",
+      "default": "Douban"
+    },
+    {
+      "link": "https://www.wechat.com",
+      "regex": "/(https://)?(([^.]+\\.)?)wechat\\.com/.*",
+      "default": "WeChat"
+    },
+    {
+      "link": "https://note.com",
+      "regex": "/(https://)?(([^.]+\\.)?)note\\.com/.*",
+      "default": "Note"
+    },
+    {
+      "link": "https://www.huaban.com",
+      "regex": "/(https://)?(([^.]+\\.)?)huaban\\.com/.*",
+      "default": "Huaban"
+    },
+    {
+      "link": "https://www.koreanartist.com",
+      "regex": "/(https://)?(([^.]+\\.)?)koreanartist\\.com/.*",
+      "default": "KoreanArtist.com"
+    },
+    {
+      "link": "https://misskey.art",
+      "regex": "/(https://)?(([^.]+\\.)?)misskey\\.art/.*",
+      "default": "Misskey.art"
+    },
+    {
+      "link": "https://misskey.design",
+      "regex": "/(https://)?(([^.]+\\.)?)misskey\\.design/.*",
+      "default": "Misskey.design"
+    },
+    {
+      "link": "https://misskey.io",
+      "regex": "/(https://)?(([^.]+\\.)?)misskey\\.io/.*",
+      "default": "Misskey.io"
+    },
+    {
+      "link": "https://oekakiskey.com",
+      "regex": "/(https://)?(([^.]+\\.)?)oekakiskey\\.com/.*",
+      "default": "Oekakiskey.com"
+    }
+  ],
+  "stores": [
+    {
+      "link": "https://gumroad.com",
+      "regex": "/(https://)?(([^.]+\\.)?)gumroad\\.com/.*",
+      "default": "Gumroad"
+    },
+    {
+      "link": "https://payhip.com",
+      "regex": "/(https://)?(([^.]+\\.)?)payhip\\.com/.*",
+      "default": "Payhip"
+    },
+    {
+      "link": "https://inprnt.com",
+      "regex": "/(https://)?(([^.]+\\.)?)inprnt\\.com/.*",
+      "default": "Inprnt"
+    },
+    {
+      "link": "https://booth.pm",
+      "regex": "/(https://)?(([^.]+\\.)?)booth\\.pm/.*",
+      "default": "Booth"
+    },
+    {
+      "link": "https://dlsite.com",
+      "regex": "/(https://)?(([^.]+\\.)?)dlsite\\.com/.*",
+      "default": "DLsite"
+    },
+    {
+      "link": "https://melonbooks.co.jp",
+      "regex": "/(https://)?(([^.]+\\.)?)melonbooks\\.co\\.jp/.*",
+      "default": "Melonbooks"
+    },
+    {
+      "link": "https://dmm.co.jp",
+      "regex": "/(https://)?(([^.]+\\.)?)dmm\\.co\\.jp/.*",
+      "default": "DMM"
+    },
+    {
+      "link": "https://dmm.com",
+      "regex": "/(https://)?(([^.]+\\.)?)dmm\\.com/.*",
+      "default": "DMM"
+    },
+    {
+      "link": "https://itch.io",
+      "regex": "/(https://)?(([^.]+\\.)?)itch\\.io/.*",
+      "default": "Itch.io"
+    },
+    {
+      "link": "https://sketchfab.com",
+      "regex": "/(https://)?(([^.]+\\.)?)sketchfab\\.com/.*",
+      "default": "Sketchfab"
+    },
+    {
+      "link": "https://hiccears.com",
+      "regex": "/(https://)?(([^.]+\\.)?)hiccears\\.com/.*",
+      "default": "Hiccears"
+    },
+    {
+      "link": "https://sharkrobot.com",
+      "regex": "/(https://)?(([^.]+\\.)?)sharkrobot\\.com/.*/",
+      "default": "SharkRobot"
+    },
+    {
+      "link": "https://artsper.com",
+      "regex": "/(https://)?(([^.]+\\.)?)artsper\\.com/.*",
+      "default": "Artsper"
+    }
+  ],
+  "commissions": [
+    {
+      "link": "https://carrd.co",
+      "regex": "/(https://)?(([^.]+\\.)?)carrd\\.co/.*/",
+      "default": "Carrd"
+    },
+    {
+      "link": "https://vgen.co",
+      "regex": "/(https://)?(([^.]+\\.)?)vgen\\.co/.*/",
+      "default": "Vgen"
+    },
+    {
+      "link": "https://skeb.jp",
+      "regex": "/(https://)?(([^.]+\\.)?)skeb\\.jp/.*/",
+      "default": "Skeb"
+    },
+    {
+      "link": "https://artmug.kr",
+      "regex": "/(https://)?(([^.]+\\.)?)artmug\\.kr/.*/",
+      "default": "Artmug"
+    },
+    {
+      "link": "https://skima.jp",
+      "regex": "/(https://)?(([^.]+\\.)?)skima\\.jp/.*/",
+      "default": "Skima"
+    },
+    {
+      "link": "https://ko-fi.com",
+      "regex": "/(https://)?(([^.]+\\.)?)ko-fi\\.com/.*/",
+      "default": "Ko-fi"
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Detector</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --accent-color: #3b82f6;
+      --accent-hover: #2563eb;
+      --success-color: #10b981;
+      --error-color: #ef4444;
+      --border-color: #334155;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 500px;
+      border: 1px solid var(--border-color);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      background: linear-gradient(135deg, #60a5fa, #a855f7);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--text-primary);
+      font-size: 1rem;
+      transition: all 0.2s;
+      box-sizing: border-box;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .result-card {
+      background-color: var(--bg-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .result-card.hidden {
+      display: none;
+    }
+
+    .platform-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .platform-category {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background-color: var(--border-color);
+      color: var(--text-secondary);
+    }
+
+    .status {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .status.match {
+      color: var(--success-color);
+    }
+
+    .status.no-match {
+      color: var(--error-color);
+    }
+
+    .loading {
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+
+    .analysis-grid {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.8rem;
+      text-align: left;
+      width: 100%;
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.5rem;
+    }
+
+    .analysis-label {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .analysis-value {
+      font-family: monospace;
+      word-break: break-all;
+      color: var(--text-primary);
+    }
+
+    .highlight-value {
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Link Detector</h1>
+    <p class="subtitle">Paste a URL to analyze and identify</p>
+
+    <div class="input-group">
+      <input type="text" id="urlInput" placeholder="https://twitter.com/user..." autocomplete="off">
+    </div>
+
+    <div id="result" class="result-card hidden">
+      <div class="platform-name" id="platformName"></div>
+      <div class="platform-category" id="platformCategory"></div>
+      <div class="regex-display" id="regexDisplay"></div>
+
+      <div class="analysis-grid" id="analysisGrid">
+        <div class="analysis-label">Protocol:</div>
+        <div class="analysis-value" id="analyzeProtocol">-</div>
+
+        <div class="analysis-label">Subdomain:</div>
+        <div class="analysis-value" id="analyzeSubdomain">-</div>
+
+        <div class="analysis-label">Domain:</div>
+        <div class="analysis-value" id="analyzeDomain">-</div>
+
+        <div class="analysis-label">Path:</div>
+        <div class="analysis-value" id="analyzePath">-</div>
+
+        <div class="analysis-label">Query Params:</div>
+        <div class="analysis-value" id="analyzeParams">-</div>
+
+        <div class="analysis-label">Smart ID:</div>
+        <div class="analysis-value highlight-value" id="analyzeId">-</div>
+      </div>
+    </div>
+
+    <div id="statusMessage" class="status"></div>
+  </div>
+
+  <script>
+    let filters = null;
+    const input = document.getElementById('urlInput');
+    const resultCard = document.getElementById('result');
+    const platformNameEl = document.getElementById('platformName');
+    const platformCategoryEl = document.getElementById('platformCategory');
+    const regexDisplayEl = document.getElementById('regexDisplay');
+    const statusEl = document.getElementById('statusMessage');
+
+    // Analysis Elements
+    const elProtocol = document.getElementById('analyzeProtocol');
+    const elSubdomain = document.getElementById('analyzeSubdomain');
+    const elDomain = document.getElementById('analyzeDomain');
+    const elPath = document.getElementById('analyzePath');
+    const elParams = document.getElementById('analyzeParams');
+    const elId = document.getElementById('analyzeId');
+
+    async function loadFilters() {
+      try {
+        const response = await fetch('./adb-assets/filters.json');
+        if (!response.ok) {
+          throw new Error('Failed to load filters.json');
+        }
+        filters = await response.json();
+        statusEl.textContent = "Ready to test.";
+        statusEl.className = "status";
+        console.log("Filters loaded:", filters);
+      } catch (error) {
+        console.error(error);
+        statusEl.innerHTML = "Error loading filters.<br>Please open this via your local dev server (e.g. localhost:3000/regex_tester.html)<br>or run <code>npx serve public</code>";
+        statusEl.className = "status no-match";
+      }
+    }
+
+    function checkUrl(url) {
+      if (!filters || !url) {
+        resultCard.classList.add('hidden');
+        return;
+      }
+
+      let found = null;
+      let category = '';
+      let matchedRegex = '';
+
+      // Categories in the JSON
+      const categories = ['socials', 'stores', 'commissions'];
+
+      for (const cat of categories) {
+        if (filters[cat]) {
+          for (const item of filters[cat]) {
+            try {
+              // The regex in JSON is stored as a string like "/ pattern /"
+              // We need to strip the surrounding slashes
+              let regexStr = item.regex;
+
+              // Basic cleaning for the specific format in filters.json
+              if (regexStr.startsWith('/')) {
+                regexStr = regexStr.substring(1);
+              }
+              if (regexStr.endsWith('/')) {
+                regexStr = regexStr.substring(0, regexStr.length - 1);
+              }
+
+              // Create RegExp object
+              const regex = new RegExp(regexStr);
+
+              if (regex.test(url)) {
+                found = item;
+                category = cat;
+                matchedRegex = regexStr;
+                break;
+              }
+            } catch (e) {
+              console.warn('Invalid regex for ' + item.default, e);
+            }
+          }
+        }
+        if (found) break;
+      }
+
+      if (found) {
+        resultCard.classList.remove('hidden');
+        platformNameEl.textContent = found.default;
+        platformCategoryEl.textContent = category;
+        regexDisplayEl.textContent = `Match: /${matchedRegex}/`;
+        statusEl.textContent = "Match found!";
+        statusEl.className = "status match";
+
+        // Perform detailed breakdown
+        deconstructUrl(url, found);
+
+      } else {
+        resultCard.classList.add('hidden');
+        statusEl.textContent = "No match found in database.";
+        statusEl.className = "status no-match";
+      }
+    }
+
+    function deconstructUrl(urlString, filterItem) {
+      try {
+        const url = new URL(urlString);
+
+        elProtocol.textContent = url.protocol;
+        elPath.textContent = url.pathname; // Search moves to its own section
+        elDomain.textContent = url.hostname;
+
+        // Query Params Display
+        const params = Array.from(url.searchParams.entries());
+        if (params.length > 0) {
+          elParams.textContent = params.map(p => `${p[0]}: ${p[1]}`).join(', ');
+        } else {
+          elParams.textContent = '-';
+        }
+
+        // Attempt to get subdomain from the hostname
+        // Basic heuristic: everything before the main domain logic
+        // Since we know the domain from the match (mostly), let's rely on URL object first for generic parsing
+        const hostParts = url.hostname.split('.');
+        let subdomain = '-';
+        if (hostParts.length > 2) {
+          // simple assume standard TLDs for now, or just take first part
+          // if www.twitter.com -> www
+          // if cool.tumblr.com -> cool
+          subdomain = hostParts[0];
+        }
+        if (subdomain === 'www' || subdomain === 'm' || subdomain === 'mobile') {
+          subdomain = '-';
+        }
+        elSubdomain.textContent = subdomain;
+
+        // Smart ID Extraction
+        let smartId = extractPossibleId(url, subdomain);
+        elId.textContent = smartId || 'Not found';
+
+      } catch (e) {
+        console.error("Deconstruction error", e);
+        elProtocol.textContent = '-';
+        elPath.textContent = '-';
+        elDomain.textContent = '-';
+        elSubdomain.textContent = '-';
+        elId.textContent = 'Error parsing URL';
+      }
+    }
+
+    function extractPossibleId(urlObj, subdomain) {
+      const path = urlObj.pathname;
+      const segments = path.split('/').filter(s => s.length > 0);
+
+      // 1. Check Subdomain (e.g. tumblr, substack)
+      if (subdomain && subdomain !== '-') {
+        return subdomain; // high confidence if it exists and isn't www
+      }
+
+      // 2. Check special path prefixes like /@handle (Youtube, Mastodon, Bluesky)
+      const handleSegment = segments.find(s => s.startsWith('@'));
+      if (handleSegment) {
+        return handleSegment.substring(1);
+      }
+
+      // 3. Check for obvious ID segments after keys like 'users', 'u', 'channel'
+      const keywords = ['users', 'user', 'u', 'channel', 'c', 'profile', 'artist', 'member'];
+      for (let i = 0; i < segments.length - 1; i++) {
+        if (keywords.includes(segments[i].toLowerCase())) {
+          return segments[i + 1];
+        }
+      }
+
+      // 4. Fallback: First segment if valid and not a system route
+      if (segments.length > 0) {
+        const first = segments[0];
+        const result = first;
+
+        // simple blocklist of common non-user pages
+        const systemPages = ['search', 'explore', 'home', 'login', 'signup', 'signin', 'about', 'tos', 'privacy', 'settings', 'messages', 'notifications', 'hashtag', 'tag'];
+
+        if (!systemPages.includes(first.toLowerCase())) {
+          return result;
+        }
+      }
+
+      // 5. Query params - Expanded check
+      // Common keys for user identification
+      const paramKeys = ['id', 'user_id', 'userid', 'member_id', 'artist_id', 'uid', 'user', 'username', 'screen_name'];
+
+      for (const key of paramKeys) {
+        if (urlObj.searchParams.has(key)) {
+          return urlObj.searchParams.get(key);
+        }
+      }
+
+      return null;
+    }
+
+    // Event listener
+    input.addEventListener('input', (e) => {
+      checkUrl(e.target.value.trim());
+    });
+
+    // Initialize
+    loadFilters();
+  </script>
+
+</body>
+
+</html>
